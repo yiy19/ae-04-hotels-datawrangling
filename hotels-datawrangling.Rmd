@@ -191,4 +191,4 @@ for our analysis.
 |reservation_status_date        |double    | Date at which the last status was set. This variable can be used in conjunction with the ReservationStatus to understand when was the booking canceled or when did the customer checked-out of the hotel|
 
 ## References {#references}
-1. Assignment Adapted from Mine Çetinkaya-Rundel's Data Science in a Box
+1. Assignment Adapted from [Mine Cetinkaya-Rundel's Data Science in a Box](https://github.com/rstudio-education/datascience-box)
