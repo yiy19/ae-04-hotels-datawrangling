@@ -36,17 +36,12 @@ skim(hotels)
 
 Are people traveling on a whim? Let's see... 
 
-Fill in the blanks for filtering for hotel bookings where the guest is **not** 
-from the US (`country` code `"USA"`) and the `lead_time` is less than 1 day.
-
-**Note:** You will need to set `eval=TRUE` when you have an answer you want to 
-try out.
-
-```{r travel-whim, eval=FALSE}
+The following data describes hotel bookings where the guest is not from the US and the guest has cancelled the booking within one day.
+```{r travel-whim, eval=TRUE}
 hotels %>%
   filter(
-    country ____ "USA", 
-    lead_time ____ ____
+    country != "USA", 
+    lead_time < 1
     )
 ```
 
