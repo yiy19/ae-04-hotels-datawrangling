@@ -97,9 +97,12 @@ shouldn't repeat a previous label, otherwise R Markdown will give you an
 error about repeated R chunk labels.
 
 ```{r label-me-1}
-# add code here
-# pay attention to correctness and code style
+hotels %>% 
+  count(adults) %>% 
+  arrange(desc(n))
 ```
+The most common number of adults booking a hotel is two. A couple of things are interesting. One is that more than twenty people book hotels at occasions. Two is that minors not accompanied by adults also book hotels quite often. 
+
 
 ### Exercise 6.
 
