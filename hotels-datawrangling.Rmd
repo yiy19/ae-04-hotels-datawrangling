@@ -49,18 +49,12 @@ hotels %>%
 
 How many bookings involve at least 1 child **or** baby?
 
-In the following chunk, replace 
+The following data shows hotel bookings where the guest involved at least one child or one baby. 
 
-- `[AT LEAST]` with the logical operator for "at least" (in two places)
-- `[OR]` with the logical operator for "or"
-
-**Note:** You will need to set `eval=TRUE` when you have an answer you want to 
-try out.
-
-```{r some-children, eval=FALSE}
+```{r some-children, eval=TRUE}
 hotels %>%
   filter(
-    children [AT LEAST] 1 [OR] babies [AT LEAST] 1
+    children >= 1 | babies >= 1
     )
 ```
 
