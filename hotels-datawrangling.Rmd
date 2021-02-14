@@ -156,11 +156,13 @@ preferably you should identify them in a reproducible way with some code.
 **Hint:** For example, you can `filter` for the given `adr` amounts and 
 `select` the relevant columns.
 
-```{r label-me-4}
-# add code here
-# pay attention to correctness and code style
-```
+```{r unusual-arr.date-people}
+hotels %>% 
+  filter(adr == -6.38 | adr == 5400) %>% 
+  select(hotel, arrival_date_year, arrival_date_month, adults, children, babies, adr)
 
+```
+The hotel type associated with a negative average daily rate is resort hotel. The hotel type associated with a really high average daily rate is city hotel. 
 
 ## Data dictionary
 
