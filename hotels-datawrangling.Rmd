@@ -96,7 +96,7 @@ Your label should be short, informative, and shouldn't include spaces. It also
 shouldn't repeat a previous label, otherwise R Markdown will give you an 
 error about repeated R chunk labels.
 
-```{r label-me-1}
+```{r freq-adults}
 hotels %>% 
   count(adults) %>% 
   arrange(desc(n))
@@ -112,10 +112,19 @@ reveal about the surprising results you spotted in the previous exercise?
 
 **Note:** Don't forget to label your R chunk as well (where it says `label-me-2`). 
 
-```{r label-me-2}
-# add code here
-# pay attention to correctness and code style
+```{r freq-adults-cancellation}
+hotels %>% 
+  filter(is_canceled == 1) %>% # examine canceled bookings
+  count(adults) %>% # count the number of cases for each number of adults 
+  arrange(desc(n)) # arrange the table by frequency from greatest to smallest
+
+hotels %>% 
+  filter(is_canceled == 0) %>% 
+  count(adults) %>% 
+  arrange(desc(n))
 ```
+
+The output above shows that the surprisingly large number of groups booking a hotel together have all been canceled. 
 
 ### Exercise 7.
 
